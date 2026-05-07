@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Little Salt Bread - Artisan Shio Pan</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;600;700&amp;family=Manrope:wght@300;400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-tint": "#805619",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary-fixed-variant": "#4b463c",
+                        "on-background": "#1e1b13",
+                        "on-primary-fixed-variant": "#643f00",
+                        "primary-container": "#c08e4c",
+                        "background": "#fff8ef",
+                        "secondary-fixed": "#e4e2e1",
+                        "surface": "#fff8ef",
+                        "on-secondary": "#ffffff",
+                        "error": "#ba1a1a",
+                        "surface-variant": "#e9e2d3",
+                        "on-secondary-fixed-variant": "#474747",
+                        "on-error-container": "#93000a",
+                        "secondary": "#5f5e5e",
+                        "error-container": "#ffdad6",
+                        "outline-variant": "#d4c4b4",
+                        "on-primary-container": "#452a00",
+                        "primary": "#805619",
+                        "primary-fixed-dim": "#f4bc76",
+                        "tertiary-container": "#9d978a",
+                        "inverse-on-surface": "#f8f0e1",
+                        "on-tertiary-container": "#333026",
+                        "inverse-primary": "#f4bc76",
+                        "surface-dim": "#e1d9cb",
+                        "on-surface-variant": "#504539",
+                        "tertiary-fixed": "#e9e2d3",
+                        "tertiary-fixed-dim": "#cdc6b8",
+                        "on-secondary-container": "#656464",
+                        "on-primary": "#ffffff",
+                        "secondary-fixed-dim": "#c8c6c6",
+                        "surface-container-highest": "#e9e2d3",
+                        "surface-container": "#f5edde",
+                        "secondary-container": "#e4e2e1",
+                        "on-secondary-fixed": "#1b1c1c",
+                        "on-surface": "#1e1b13",
+                        "tertiary": "#635e53",
+                        "on-tertiary-fixed": "#1e1b13",
+                        "inverse-surface": "#343026",
+                        "on-error": "#ffffff",
+                        "outline": "#827567",
+                        "surface-container-high": "#efe7d9",
+                        "on-primary-fixed": "#2a1800",
+                        "on-tertiary": "#ffffff",
+                        "surface-container-low": "#fbf3e4",
+                        "surface-bright": "#fff8ef",
+                        "primary-fixed": "#ffddb6"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Noto Serif"],
+                        "body": ["Manrope"],
+                        "label": ["Manrope"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .grain-texture {
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+            opacity: 0.02;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container overflow-x-hidden">
+<div class="fixed inset-0 grain-texture z-50"></div>
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#FFF8EF]/80 dark:bg-[#1E1B13]/80 backdrop-blur-md">
+<div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
+<div class="text-2xl font-['Noto_Serif'] font-bold text-[#805619] tracking-tight">Little Salt Bread</div>
+<div class="hidden md:flex gap-10 items-center">
+<a class="font-['Noto_Serif'] font-semibold tracking-tight text-[#805619] border-b-2 border-[#805619] pb-1" href="#">Our Bread</a>
+<a class="font-['Noto_Serif'] font-semibold tracking-tight text-[#5F5E5E] hover:text-[#805619] transition-colors duration-300" href="#">Workshops</a>
+<a class="font-['Noto_Serif'] font-semibold tracking-tight text-[#5F5E5E] hover:text-[#805619] transition-colors duration-300" href="#">Wholesale</a>
+<a class="font-['Noto_Serif'] font-semibold tracking-tight text-[#5F5E5E] hover:text-[#805619] transition-colors duration-300" href="#">Journal</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 transition-transform scale-95 active:scale-90 hover:bg-[#FBF3E4]/50 rounded-full">
+<span class="material-symbols-outlined text-[#805619]">shopping_bag</span>
+</button>
+</div>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="relative min-h-screen flex items-center pt-20 px-8">
+<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+<div class="md:col-span-6 z-10">
+<h1 class="font-headline text-5xl md:text-7xl lg:text-8xl font-bold leading-tight tracking-tight text-on-surface mb-8">
+                    The Perfect Balance of <span class="text-primary italic font-normal">Butter</span> &amp; Sea Salt
+                </h1>
+<p class="text-secondary text-lg md:text-xl max-w-md mb-10 leading-relaxed">
+                    Golden, flaky crust meets a soft, buttery heart. Handcrafted daily in the heart of Blok M.
+                </p>
+<div class="flex flex-col sm:flex-row gap-4">
+<button class="bg-primary text-on-primary px-10 py-5 rounded-sm font-bold tracking-wide transition-all hover:bg-primary-container hover:-translate-y-0.5 active:scale-95 shadow-sm">
+                        ORDER ONLINE
+                    </button>
+<button class="border border-outline-variant/20 text-primary px-10 py-5 rounded-sm font-bold tracking-wide transition-all hover:bg-surface-container-low hover:-translate-y-0.5 active:scale-95">
+                        VIEW MENU
+                    </button>
+</div>
+</div>
+<div class="md:col-span-6 relative h-[600px] w-full">
+<div class="absolute inset-0 bg-surface-container-low rounded-tl-[120px] rounded-br-[60px] transform translate-x-4 translate-y-4"></div>
+<img class="absolute inset-0 w-full h-full object-cover rounded-tl-[120px] rounded-br-[60px] shadow-sm" data-alt="close-up of golden brown artisan salt bread rolls with coarse sea salt flakes on top, warm morning sunlight hitting the crust" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDcHd_kRjNJ3nDnuVFB4qF9KaEOf6-Dqhbs0dlJiRr5ZDpzr9cPcnPrt9V_5H29_fCl2yAK7B3QwmLYDu5eiFYzLMME9UMXW-naeUOOAOyBMh58Ttr_ESo9zvFiOg2qwaOiSz_ql5CUVVLaraJDFzjxAAxrWrkCT58zBO_H1GjlEUgE1nC9Hjqv0OqDrKE1NHvOCj5XexFbm6BCP9f6j296W9MQWWG4BvZC9hnGL_oKcYyQBjtSx_DcWEdsetHw-Z4dDgvm3DUTP9Q"/>
+</div>
+</div>
+</section>
+<!-- Introduction Section -->
+<section class="py-32 bg-surface-container-low">
+<div class="max-w-7xl mx-auto px-8 grid grid-cols-1 md:grid-cols-2 gap-24 items-center">
+<div class="order-2 md:order-1">
+<div class="aspect-[4/5] relative">
+<img class="w-full h-full object-cover rounded-xl" data-alt="Baker dusting flour over dough on a rustic wooden table, atmospheric side lighting showing particles in the air" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzB7l9GM7Q8kB_9oGSJ1Xnu6KSfcBT_bpVtX-D6veYFAnWTERGeZ-U94MHf-LbWEkxFDFxuXdraDp8v2nA9HMFN9bOuyfbkVSTEG-6MFXyqoYvVXx8RKZoZuSOeEZIf59tAXaWrltLGaDwZA6L0yIJv1beH3yA-aDCyrKd25hB9QoslSKQZib6uPHsCI4M7UrOVGWXjpjj9UVxPCxYTN5AKB7MyV97J29yeeBu1IE5aCBRffi41X_w6II-qaCUsrfgkJxezuMtX4A"/>
+<div class="absolute -bottom-10 -right-10 bg-primary-container p-8 rounded-sm text-on-primary-container hidden lg:block">
+<p class="font-headline text-2xl font-bold">Since 2022</p>
+<p class="text-sm font-label uppercase tracking-widest opacity-80">Baked with Intention</p>
+</div>
+</div>
+</div>
+<div class="order-1 md:order-2">
+<span class="text-primary font-label uppercase tracking-widest text-sm font-bold block mb-4 italic">The Shio Pan Philosophy</span>
+<h2 class="font-headline text-4xl md:text-5xl font-bold text-on-surface mb-8 leading-tight">Quiet precision, <br/>loud flavors.</h2>
+<div class="space-y-6 text-secondary text-lg leading-relaxed">
+<p>
+                        Shio Pan, or "Salt Bread," is a study in Japanese baking minimalism. What appears simple is actually a complex orchestration of high-moisture dough and premium cultured butter.
+                    </p>
+<p>
+                        At Little Salt Bread, we use a 48-hour cold fermentation process. This allows the enzymes to break down the starches, resulting in a crumb that is remarkably soft while maintaining a satisfying, chewy pull.
+                    </p>
+<p>
+                        Finished with hand-harvested Malden sea salt, each bun is a tactile journey through texture and taste.
+                    </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Best Sellers Section -->
+<section class="py-32 px-8 bg-surface">
+<div class="max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-20 gap-8">
+<div>
+<span class="text-primary font-label uppercase tracking-widest text-sm font-bold block mb-4">Current Favorites</span>
+<h2 class="font-headline text-5xl font-bold text-on-surface">The Best Sellers</h2>
+</div>
+<div class="h-px flex-grow mx-12 bg-outline-variant/20 hidden md:block"></div>
+<a class="text-primary font-bold flex items-center gap-2 group underline-offset-8 hover:underline" href="#">
+                    View full selection <span class="material-symbols-outlined transition-transform group-hover:translate-x-1">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+<!-- Product 1 -->
+<div class="bg-surface-container-low p-8 rounded-sm group cursor-pointer transition-all hover:bg-surface-container">
+<div class="overflow-hidden mb-8 rounded-tr-3xl">
+<img class="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-105" data-alt="top view of several golden brown salt bread rolls on a minimalist white ceramic plate" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4ZuATfVJxZgjVq1FNrxm1oKtEoFp9UGejbUCpiatYG9NYJmxoSPe7KIGQe8qfbBOuay4xV-PL9eZJNl8EoXLK4f8lHcLNrlUubJo9eC25HSQwDhKQjn03Y24PacGaXw1L-jo2qQNeBb9K7fvyqcCSHpZaw5Mc7mDwyB3HOhZv05B9tcPlP_tU4iAEizNFNVbT0q07Er2YbR9j4Fcqjj6ZMIMwznbzACO9dEJv_ofxuuQifze1GGJgZQMk0TEqh51wz1Y-_cr1Tvk"/>
+</div>
+<div class="flex justify-between items-start mb-4">
+<h3 class="font-headline text-2xl font-bold">The Original</h3>
+<span class="text-primary font-bold">Rp 18k</span>
+</div>
+<p class="text-secondary mb-6 line-clamp-2 italic">Our signature roll. High-grade butter core with a sprinkle of Maldon sea salt flakes.</p>
+<div class="flex gap-2">
+<span class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full text-xs font-bold uppercase tracking-tighter">Classic</span>
+<span class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full text-xs font-bold uppercase tracking-tighter">Best Seller</span>
+</div>
+</div>
+<!-- Product 2 -->
+<div class="bg-surface-container-low p-8 rounded-sm group cursor-pointer transition-all hover:bg-surface-container">
+<div class="overflow-hidden mb-8 rounded-tl-3xl">
+<img class="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Shio pan sandwich filled with creamy egg mayo and black truffle shavings on a dark wooden board" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDoDa4GgEvi-vNhlCEUMmnrgagoA6vba_wsqAqZkVzAMRAnZ18NNwR3X6KmF7nh5SPiT3Bnf8XAt5NbRLLFiwQ9EBpa10Ab4oo-Pei2Pt7VKzm2BxBO0yJPY3npDKLPXAaAiS3ChcCesJ3lr0uQ_wh54DT8Tk3gr9EFm93DuDBQDr5RrKG4bACwXBkDB6bFuNO3L9bZPTtprOtM5173NKcq_ME53c5g0uh6a10qjMRVDMKyxgJR2Syn3JCwXau_9a6UArghVHWw6Ak"/>
+</div>
+<div class="flex justify-between items-start mb-4">
+<h3 class="font-headline text-2xl font-bold">Truffle Egg Mayo</h3>
+<span class="text-primary font-bold">Rp 32k</span>
+</div>
+<p class="text-secondary mb-6 line-clamp-2 italic">A savory masterpiece. Creamy Japanese egg mayo infused with aromatic black truffle oil.</p>
+<div class="flex gap-2">
+<span class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full text-xs font-bold uppercase tracking-tighter">Savory</span>
+<span class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full text-xs font-bold uppercase tracking-tighter">Premium</span>
+</div>
+</div>
+<!-- Product 3 -->
+<div class="bg-surface-container-low p-8 rounded-sm group cursor-pointer transition-all hover:bg-surface-container">
+<div class="overflow-hidden mb-8 rounded-br-3xl">
+<img class="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A chocolate dusted pastry on a beige stone surface with subtle shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDdCo1aIZwzTfOLWhaZlT33acKAS2H7K-4Nxepl2-zO4nLbXCrJvKKvQ8p-ww3YXTY6XtQ-mnfp9S-7lADVs4Dk0Na2107ENtLHII5fAJJCorsKygPKwJFuU2ZFLhwcHSkS0e7CYvRSMQEfxPR9IHcTylsETSEiGDyPFcdAxTTnkOv5QtW_B6vk1lkTe-7SQXW4NkXtgswezcertWf-5YQIbuLOYUKQRqyDYlT_4yEodi326oGxIjAEGMyTrqSJ6bs6x0LZ0lHKsBM"/>
+</div>
+<div class="flex justify-between items-start mb-4">
+<h3 class="font-headline text-2xl font-bold">Kinako Chocolate</h3>
+<span class="text-primary font-bold">Rp 28k</span>
+</div>
+<p class="text-secondary mb-6 line-clamp-2 italic">Nutty roasted soybean powder paired with dark 70% chocolate chunks.</p>
+<div class="flex gap-2">
+<span class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full text-xs font-bold uppercase tracking-tighter">Sweet</span>
+<span class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full text-xs font-bold uppercase tracking-tighter">Seasonal</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section (Visit Us) -->
+<section class="py-24 bg-surface-container-highest relative overflow-hidden">
+<div class="absolute top-0 right-0 w-1/3 h-full bg-primary/5 -skew-x-12 transform translate-x-1/2"></div>
+<div class="max-w-7xl mx-auto px-8 flex flex-col items-center text-center relative z-10">
+<span class="material-symbols-outlined text-primary text-5xl mb-6">location_on</span>
+<h2 class="font-headline text-4xl md:text-5xl font-bold text-on-surface mb-6">Experience it fresh.</h2>
+<p class="text-secondary text-xl max-w-2xl mb-12 italic">
+                The aroma of baking bread is best enjoyed in person. Our small corner in Blok M is waiting to welcome you with warm rolls every hour.
+            </p>
+<button class="bg-primary text-on-primary px-12 py-6 rounded-sm font-bold tracking-widest transition-all hover:bg-primary-container hover:shadow-lg hover:-translate-y-1 active:scale-95 flex items-center gap-3">
+                VISIT US IN BLOK M
+                <span class="material-symbols-outlined">launch</span>
+</button>
+<p class="mt-8 font-label text-sm uppercase tracking-[0.2em] text-secondary/60">Jl. Melawai 3 No. 10, Jakarta Selatan</p>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-[#FBF3E4] dark:bg-[#1E1B13]">
+<div class="flex flex-col md:flex-row justify-between items-center px-12 py-16 w-full mt-24 max-w-7xl mx-auto">
+<div class="mb-8 md:mb-0">
+<div class="font-['Noto_Serif'] text-lg text-[#805619] font-bold mb-2">Little Salt Bread</div>
+<p class="font-['Manrope'] text-sm uppercase tracking-widest text-[#5F5E5E] dark:text-[#A8A29E]">© 2024 Little Salt Bread. Baked with intention.</p>
+</div>
+<div class="flex gap-8">
+<a class="font-['Manrope'] text-sm uppercase tracking-widest text-[#5F5E5E] dark:text-[#A8A29E] hover:text-[#805619] dark:hover:text-[#C08E4C] transition-opacity opacity-80 hover:opacity-100" href="#">Instagram</a>
+<a class="font-['Manrope'] text-sm uppercase tracking-widest text-[#5F5E5E] dark:text-[#A8A29E] hover:text-[#805619] dark:hover:text-[#C08E4C] transition-opacity opacity-80 hover:opacity-100" href="#">Facebook</a>
+<a class="font-['Manrope'] text-sm uppercase tracking-widest text-[#5F5E5E] dark:text-[#A8A29E] hover:text-[#805619] dark:hover:text-[#C08E4C] transition-opacity opacity-80 hover:opacity-100" href="#">Location</a>
+<a class="font-['Manrope'] text-sm uppercase tracking-widest text-[#5F5E5E] dark:text-[#A8A29E] hover:text-[#805619] dark:hover:text-[#C08E4C] transition-opacity opacity-80 hover:opacity-100" href="#">Contact</a>
+</div>
+</div>
+</footer>
+</body></html>

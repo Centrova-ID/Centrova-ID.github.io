@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "outline": "#8a726b",
+                    "on-tertiary": "#ffffff",
+                    "surface-dim": "#dbdad6",
+                    "tertiary": "#6d574d",
+                    "surface-variant": "#e4e2de",
+                    "on-error-container": "#93000a",
+                    "surface-container-high": "#eae8e4",
+                    "surface": "#fbf9f5",
+                    "tertiary-fixed": "#fbdcce",
+                    "inverse-primary": "#ffb5a0",
+                    "surface-bright": "#fbf9f5",
+                    "inverse-on-surface": "#f2f0ed",
+                    "secondary-fixed-dim": "#d3c4b1",
+                    "inverse-surface": "#30312e",
+                    "primary-fixed": "#ffdbd1",
+                    "surface-container-highest": "#e4e2de",
+                    "secondary-fixed": "#f0e0cc",
+                    "on-tertiary-container": "#fffbff",
+                    "on-secondary-fixed": "#221a0e",
+                    "surface-container-low": "#f5f3ef",
+                    "on-primary": "#ffffff",
+                    "error-container": "#ffdad6",
+                    "on-primary-container": "#fffbff",
+                    "on-error": "#ffffff",
+                    "on-tertiary-fixed-variant": "#574238",
+                    "on-primary-fixed-variant": "#82280c",
+                    "on-tertiary-fixed": "#281810",
+                    "on-background": "#1b1c1a",
+                    "on-secondary-fixed-variant": "#4f4537",
+                    "on-surface": "#1b1c1a",
+                    "on-primary-fixed": "#3b0900",
+                    "tertiary-fixed-dim": "#dec1b3",
+                    "outline-variant": "#ddc0b8",
+                    "error": "#ba1a1a",
+                    "primary": "#9e3c1f",
+                    "secondary": "#675d4d",
+                    "surface-tint": "#a13f21",
+                    "background": "#fbf9f5",
+                    "on-secondary": "#ffffff",
+                    "surface-container": "#efeeea",
+                    "surface-container-lowest": "#ffffff",
+                    "tertiary-container": "#886f64",
+                    "on-secondary-container": "#6e6353",
+                    "primary-fixed-dim": "#ffb5a0",
+                    "on-surface-variant": "#57423c",
+                    "secondary-container": "#f0e0cc",
+                    "primary-container": "#be5435"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "spacing": {},
+            "fontFamily": {
+                    "headline": ["Noto Serif"],
+                    "body": ["Plus Jakarta Sans"],
+                    "label": ["Plus Jakarta Sans"]
+            }
+          },
+        }
+      }
+    </script>
+<style>
+        .cave-mask {
+            clip-path: polygon(0% 15%, 15% 5%, 35% 20%, 50% 5%, 70% 15%, 90% 0%, 100% 15%, 100% 85%, 85% 95%, 65% 80%, 50% 95%, 30% 85%, 15% 100%, 0% 85%);
+        }
+        .organic-edge {
+            border-radius: 64% 36% 70% 30% / 30% 60% 40% 70%;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-stone-50/70 dark:bg-stone-900/70 backdrop-blur-xl">
+<div class="flex justify-between items-center px-6 md:px-12 py-6 w-full max-w-screen-2xl mx-auto">
+<div class="font-serif text-2xl font-bold text-orange-900 dark:text-orange-500">Sarang Semut</div>
+<div class="hidden md:flex gap-10 items-center">
+<a class="text-orange-900 dark:text-orange-300 font-bold border-b-2 border-orange-800 font-serif text-lg tracking-tight transition-all duration-300 hover:opacity-80" href="#">Interior</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-orange-800 font-serif text-lg tracking-tight transition-all duration-300 hover:opacity-80" href="#">Menu</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-orange-800 font-serif text-lg tracking-tight transition-all duration-300 hover:opacity-80" href="#">Location</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-orange-800 font-serif text-lg tracking-tight transition-all duration-300 hover:opacity-80" href="#">Hours</a>
+</div>
+<button class="bg-primary text-on-primary px-8 py-3 rounded-full font-label font-semibold text-white dark:text-orange-400 transition-all duration-300 hover:opacity-80 active:scale-95 duration-200">
+                Book a Table
+            </button>
+</div>
+</nav>
+<main>
+<!-- Hero Section -->
+<section class="relative min-h-screen flex items-center pt-24 overflow-hidden">
+<div class="container mx-auto px-6 md:px-12 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<div class="lg:col-span-6 z-10">
+<h1 class="font-headline text-5xl md:text-7xl lg:text-8xl text-on-surface leading-tight tracking-tight mb-8">
+                        Sarang Semut: <br/>
+<span class="italic text-primary">The Subterranean Sanctuary</span>
+</h1>
+<p class="text-on-surface-variant text-lg md:text-xl max-w-lg mb-10 leading-relaxed">
+                        Discover an architectural escape carved into the heart of Blok M. A space where organic forms meet artisanal stillness.
+                    </p>
+<div class="flex flex-wrap gap-4">
+<button class="bg-primary text-on-primary px-10 py-5 rounded-full font-semibold text-lg transition-all hover:bg-primary-container">
+                            Plan Your Visit
+                        </button>
+<button class="bg-secondary-container text-on-secondary-container px-10 py-5 rounded-full font-semibold text-lg transition-all hover:opacity-80">
+                            Explore Menu
+                        </button>
+</div>
+</div>
+<div class="lg:col-span-6 relative h-[600px] w-full">
+<div class="absolute inset-0 cave-mask bg-surface-container-highest overflow-hidden">
+<img alt="Interior" class="w-full h-full object-cover" data-alt="Interior of a luxury cafe with curved beige plaster walls, warm ambient lighting, organic minimalist furniture and a cave-like architectural aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxGjEPhOquSOqqt_MhGxoH6kpu4VH2ZTkH0kHMVakzmSqbvqyTOb4KPGP10I38gRwM7_3Zn_pqHGy1I2VKFV3kNf4s2KfX9XrlyfnxfUDJMqWUzN78kXzJxsROw5mf5ED87qmops8Cp_c79VNkjITEXfk1QyTw8uaDLH8nrv-ZeegX_1iQkQWZIdpW-Kh4JvffvjDtUpkaJCB7DgdocoV4lMJDEyt4w3HvRD0-_HXKyUIOJHVTUCNMOhVB_5wuJ-k50S1-jne9cIA"/>
+</div>
+<div class="absolute -bottom-10 -left-10 w-48 h-48 bg-tertiary-fixed rounded-full opacity-30 blur-3xl"></div>
+</div>
+</div>
+</section>
+<!-- Subterranean Gallery Concept -->
+<section class="py-32 bg-surface-container-low overflow-hidden">
+<div class="container mx-auto px-6 md:px-12">
+<div class="flex flex-col md:flex-row gap-16 items-center">
+<div class="w-full md:w-1/2">
+<div class="organic-edge bg-surface-container-highest h-[500px] relative overflow-hidden shadow-2xl">
+<img alt="Concept" class="w-full h-full object-cover grayscale-[20%]" data-alt="Abstract architectural shot of wavy plaster walls, light playing on curved surfaces, warm sepia tones, shadows in an underground space" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBUuID8VNPkKcoiGXIJJypNCBwcDfshtLD87aczc5-1tJBH8xRnsWaypiUG9-DPYzStYvoX2lIPC6h1GnYkkXQr42f4B9fMxCJYT-vq9yxCR5Hvo6x63YK6_AfIxEygjE6FdQgggc6moccheXChWn-UXX2WzanwAhYLNUQnJYy_8YUA4itNtd3A9TNS0WD_lNEYn_0jZPS6cWwYW4lP7B2-W3wl9We7FzwUxgjbWODsGLzpOvKNVxcuG9VotKBEMCf4erPP-J90Lss"/>
+</div>
+</div>
+<div class="w-full md:w-1/2 md:pl-12">
+<span class="text-primary font-bold uppercase tracking-widest text-sm mb-4 block">The Experience</span>
+<h2 class="font-headline text-4xl md:text-6xl mb-8 leading-tight">Subterranean Gallery</h2>
+<div class="space-y-6 text-on-surface-variant text-lg leading-relaxed max-w-xl">
+<p>Our space is an ode to the "Sarang Semut"—the intricate, organic tunnels of the ant colony. Every curve in our walls is hand-finished to mimic natural sediment layers.</p>
+<p>Experience a sanctuary where the city noise fades, replaced by the soft hum of the underground and the warm glow of recessed lighting reflecting off eroded textures.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Menu Teaser -->
+<section class="py-32 bg-surface">
+<div class="container mx-auto px-6 md:px-12">
+<div class="text-center mb-20">
+<h2 class="font-headline text-4xl md:text-6xl mb-4">Crafted Treats &amp; Artisanal Brews</h2>
+<p class="text-on-surface-variant text-lg max-w-2xl mx-auto">Sensory delights prepared with seasonal precision and sculptural aesthetics.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+<!-- Menu Card 1 -->
+<div class="group cursor-pointer">
+<div class="aspect-[4/5] rounded-xl overflow-hidden mb-6 relative">
+<img alt="Gelato" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Artisanal dark chocolate gelato in a rough stoneware bowl, garnished with a single gold leaf and sea salt, dramatic moody lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbiJiemeCsNGNqJsMxzkyr8I7BKKqurWTPpfxqT7jVRCEAgc5meCZEIzhvJTA7CVFa3Y0d_iGfv5IlH3PIbBJ3IqkUPr9sBEbc_36kwxdhMs3ET_2dv7NSqsvVSH4qyRN7Q4wLuZxX7QFhkZPU2OdiXDhSMRlQdKWhXGtkfl2fAKivjXHIfOi8JBRXry3VVazTSLIKpUlU9UvU95jeVEq7iDZs1CnNnI5ClX7cwX7Lmgs0x3N_2tzYkbbQ551mGY9uLFYrsC8r9XM"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-8">
+<span class="text-on-background font-bold text-xl">View Flavor Profile</span>
+</div>
+</div>
+<div class="flex justify-between items-baseline">
+<h3 class="font-headline text-3xl">Sculpted Gelato</h3>
+<span class="text-primary font-bold">From Rp 45k</span>
+</div>
+<p class="text-on-surface-variant mt-2">Smooth, dense, and naturally sweetened with locally sourced ingredients.</p>
+</div>
+<!-- Menu Card 2 -->
+<div class="group cursor-pointer md:mt-24">
+<div class="aspect-[4/5] rounded-xl overflow-hidden mb-6 relative">
+<img alt="Pastries" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Selection of flaky golden croissants and pastries on a marble table with a coffee cup, soft morning light hitting the textures" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCjurGyCY2IwGSCbkxihPuyHfiHCScQW1KFeTiBupzDhc-HDtMiVxLzAyOjN3ODt2ggzo0wStI-FyoB1EnnjQrUzfXNqubJVaqdhoiDXVLEzHy1PpdaMSVtAiCvXoHSKYkBv03Ey3tQUIyazOOJyJlBRisnjIGIeJWJ-xL05Tg02TJmVDwsLl-eb1-Bj6fds9h1fYWDYx3FIvKblaV1EfAeqCr6cJ_zd5MXcaRnfQzg7AHpPqfmlyZDibPxz9VMa98eMTyfP2XLz6g"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-8">
+<span class="text-on-background font-bold text-xl">View Bakery List</span>
+</div>
+</div>
+<div class="flex justify-between items-baseline">
+<h3 class="font-headline text-3xl">Tectonic Pastries</h3>
+<span class="text-primary font-bold">From Rp 38k</span>
+</div>
+<p class="text-on-surface-variant mt-2">Flaky layers that crumble like limestone, baked fresh every sunrise.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Viral at Blok M Section -->
+<section class="py-32 bg-surface-container-highest">
+<div class="container mx-auto px-6 md:px-12 grid grid-cols-1 lg:grid-cols-3 gap-8">
+<div class="lg:col-span-1 flex flex-col justify-center">
+<h2 class="font-headline text-4xl md:text-5xl mb-6">Viral at Blok M</h2>
+<p class="text-on-surface-variant text-lg leading-relaxed mb-8">Located at the cultural epicenter of South Jakarta, we are more than just a cafe—we are a landmark for the modern urban explorer.</p>
+<div class="flex items-center gap-4 text-primary">
+<span class="material-symbols-outlined text-4xl" style="font-variation-settings: 'FILL' 1;">trending_up</span>
+<span class="font-bold tracking-tight">Top Trending on Social Media</span>
+</div>
+</div>
+<div class="lg:col-span-2 grid grid-cols-2 gap-4 h-[500px]">
+<div class="h-full rounded-2xl overflow-hidden bg-surface">
+<img alt="Social" class="w-full h-full object-cover" data-alt="Candid lifestyle shot of two people laughing in a stylish organic cafe, natural lighting, aesthetic coffee cups on the table" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBM13sOKohpyXQJtwxhL4YC23U9W_B3EG9wB-LzWY6LFqJSCn5yVj7n5x6S4o2t476KpZe7CoeYB2IFukr1Zpm8E6PMi833U-fZcyTKAk_WrpfyhzAv-yX5bMuCxNq2PeIV9UraZmkwpRbyr_ait8cZG126dHRwNvhzaSSI3FDzq73m4gghVrmNf4wX_-ik4VM2haKdcsM9lefej9h48ZZf36MImgfERCp6_YCYW68uU95I3okdbwwVfK3bk-aPmjpcBGohyJlcO6E"/>
+</div>
+<div class="flex flex-col gap-4">
+<div class="h-1/2 rounded-2xl overflow-hidden bg-surface">
+<img alt="Location" class="w-full h-full object-cover" data-alt="Interior detail of cafe lighting fixtures and textured walls, architectural focus, warm earthy aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCiIDKMZLUOHp7t6NQIlSTfHvz1j7Pakqa7uqlECbxwlOzYSSn3WocZpw3uWrgRz4EtEGf3_vDcnEV1GTv5l77ERkLCSN2Mxi9AxbpP2HlsM1rCLOJwulsdnG6OfykBk9APHGb3Q2C_WOfJX5zD48PNXHZiK9fyc_j28fhrjcIuQkFNjKuj9nqBiKyy7Lc35cpGEuxSLokJFLIlB2ia4LfdQRqTAa-vP-FMfkxb2d6h4C50XtP3L-poyW6McP0M3VrqBNHr3UW-K-s"/>
+</div>
+<div class="h-1/2 rounded-2xl overflow-hidden bg-primary flex flex-col justify-center p-8 text-on-primary">
+<div class="text-5xl font-headline mb-2">50k+</div>
+<div class="text-lg opacity-80">Stories Tagged</div>
+<div class="mt-auto flex justify-end">
+<span class="material-symbols-outlined text-4xl">share</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-40 bg-surface overflow-hidden relative">
+<div class="absolute top-0 right-0 w-96 h-96 bg-primary-container rounded-full opacity-10 blur-3xl -mr-48 -mt-48"></div>
+<div class="container mx-auto px-6 md:px-12 text-center relative z-10">
+<h2 class="font-headline text-5xl md:text-8xl mb-12 leading-tight">Ready to descend?</h2>
+<div class="flex flex-col md:flex-row justify-center items-center gap-8">
+<a class="inline-block bg-primary text-on-primary px-16 py-6 rounded-full font-bold text-2xl transition-all hover:scale-105 active:scale-95" href="#">
+                        Plan Your Visit
+                    </a>
+<div class="text-left">
+<p class="font-bold text-xl mb-1">Visit Us at Blok M</p>
+<p class="text-on-surface-variant">Jl. Melawai Raya, South Jakarta</p>
+<p class="text-on-surface-variant italic">Open Daily: 08:00 - 22:00</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full rounded-t-[4rem] mt-20 bg-stone-100 dark:bg-stone-950">
+<div class="flex flex-col items-center gap-8 py-16 px-8 text-center max-w-screen-2xl mx-auto">
+<div class="font-serif text-xl font-bold text-orange-900 dark:text-orange-500">Sarang Semut</div>
+<div class="flex flex-wrap justify-center gap-8 md:gap-12">
+<a class="font-sans text-sm tracking-wide text-stone-500 dark:text-stone-400 hover:text-orange-700 underline decoration-orange-800/30 transition-opacity" href="#">Instagram</a>
+<a class="font-sans text-sm tracking-wide text-stone-500 dark:text-stone-400 hover:text-orange-700 underline decoration-orange-800/30 transition-opacity" href="#">WhatsApp</a>
+<a class="font-sans text-sm tracking-wide text-stone-500 dark:text-stone-400 hover:text-orange-700 underline decoration-orange-800/30 transition-opacity" href="#">Google Maps</a>
+<a class="font-sans text-sm tracking-wide text-stone-500 dark:text-stone-400 hover:text-orange-700 underline decoration-orange-800/30 transition-opacity" href="#">Privacy Policy</a>
+</div>
+<div class="pt-8 border-t border-outline-variant w-full opacity-50">
+<p class="font-sans text-sm tracking-wide text-orange-900 dark:text-orange-500">© 2024 Sarang Semut Blok M. Carved in Jakarta.</p>
+</div>
+</div>
+</footer>
+</body></html>
